@@ -1,0 +1,71 @@
+'scopeName': 'source.epl'
+'name': 'Elastic Programing Language'
+'fileTypes': ['epl', 'ePL', 'EPL']
+
+'patterns':  [
+  {
+    'include': '#preprocessor-rule-enabled'
+  }
+  {
+    'include': '#preprocessor-rule-disabled'
+  }
+  {
+    'include': '#preprocessor-rule-other'
+  }
+  {
+    'include': '#comments'
+  }
+  {
+    'match': '\\b(break|case|continue|default|do|else|for|goto|if|_Pragma|return|switch|while)\\b'
+    'name': 'keyword.control.epl'
+  }
+  {
+    'match': '\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b'
+    'name': 'storage.type.epl'
+  }
+  {
+    'match': '\\b(const|extern|register|restrict|static|volatile|inline)\\b'
+    'name': 'storage.modifier.epl'
+  }
+  {
+    'comment': 'common ePL constant naming idiom -- kConstantVariable'
+    'match': '\\bk[A-Z]\\w*\\b'
+    'name': 'constant.other.variable.mac-classic.epl'
+  }
+  {
+    'match': '\\bg[A-Z]\\w*\\b'
+    'name': 'variable.other.readwrite.global.mac-classic.epl'
+  }
+  {
+    'match': '\\bs[A-Z]\\w*\\b'
+    'name': 'variable.other.readwrite.static.mac-classic.epl'
+  }
+  {
+    'match': '\\b(NULL|true|false|TRUE|FALSE)\\b'
+    'name': 'constant.language.epl'
+  }
+  {
+    'include': '#sizeof'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
+    'name': 'constant.numeric.epl'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.epl'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.epl'
+    'name': 'string.quoted.double.epl'
+    'patterns': [
+      {
+        'include': '#string_escaped_char'
+      }
+      {
+        'include': '#string_placeholder'
+      }
+    ]
