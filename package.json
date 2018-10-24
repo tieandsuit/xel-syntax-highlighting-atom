@@ -1,0 +1,16 @@
+{
+  "name": "xel-syntax",
+  "version": "0.0.1",
+  "description": "Elastic Programing Language syntax",
+  "repository": "https://github.com/tieandsuit/xel-syntax-highlighting-atom",
+  "keywords": [
+    "syntax",
+    "highlighting",
+    "theme"
+  ],
+  "license": "MIT",
+  "bugs": "https://github.com/tieandsuit/xel-syntax-highlighting-atom/issues",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
