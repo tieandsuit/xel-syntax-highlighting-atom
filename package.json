@@ -2,7 +2,10 @@
   "name": "xel-syntax",
   "version": "0.0.1",
   "description": "(ePL) Elastic Programing Language syntax",
-  "repository": "https://github.com/tieandsuit/xel-syntax-highlighting-atom",
+  "repository":  {
+    "type": "git",
+    "url": "https://github.com/tieandsuit/xel-syntax-highlighting-atom",
+     },
   "keywords": [
     "syntax",
     "highlighting",
